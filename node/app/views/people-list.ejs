@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Selecao de dados com MySQL e Node</title>
+</head>
+<body>
+  <div class="table-data">
+    <h2>Mostrar dados com Node & MySQL</h2>
+    <table border="1">
+      <tr>
+        <th>S.N</th>
+        <th>Nome</th>
+      </tr>
+      <% if (userData.length !== 0) { %>
+        <% userData.forEach(function(data, index) { %>
+          <tr>
+            <td><%= index + 1 %></td>
+            <td><%= data.name %></td>
+          </tr>
+        <% }); %>
+      <% } else { %>
+        <tr>
+          <td colspan="7">Dados não localizados</td>
+        </tr>
+      <% } %>
+    </table>
+  </div>
+  <a href="/">Index</a>
+</body>
+</html>
